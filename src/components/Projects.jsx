@@ -31,7 +31,6 @@ function Projects() {
                     <ProjectCard
                         title="Product Management System"
                         tech="React, Bootstrap ,CSS5 ,Node.js, Express, MySQL"
-                        Live Link="https://quickcartapp.vercel.app/"
                         goal="To manage products with category-wise listing, admin CRUD operations, and secure backend APIs."
                     />
 
