@@ -2,14 +2,59 @@ function Contact() {
   return (
     <>
       <section className="contact py-5" id="contact">
-        <div className="container text-center">
-          <h2 className="mb-3">Get In Touch</h2>
-          <p className="text-muted mb-4">
-            Have a project, opportunity, or question? Feel free to reach out 👋
-          </p>
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-8 text-center">
+              <h2 className="mb-3">Get In Touch</h2>
+              <p className="text-muted mb-4">
+                Have a project, opportunity, or question? Feel free to reach out 👋
+              </p>
+            </div>
+          </div>
+
+          <div className="row justify-content-center">
+            <div className="col-lg-6">
+              {/* Contact Form */}
+              <form className="card shadow-sm p-4 mb-4">
+                <div className="mb-3">
+                  <label className="form-label">Your Name</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+
+                <div className="mb-3">
+                  <label className="form-label">Your Email</label>
+                  <input
+                    type="email"
+                    className="form-control"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+
+                <div className="mb-3">
+                  <label className="form-label">Your Message</label>
+                  <textarea
+                    className="form-control"
+                    rows="4"
+                    placeholder="Write your message"
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" className="btn btn-primary w-100">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
 
           {/* Contact Details */}
-          <div className="mb-4">
+          <div className="text-center mb-4">
             <p className="mb-1">
               <strong>Email:</strong> babartushar560@gmail.com
             </p>
