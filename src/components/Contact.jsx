@@ -11,7 +11,7 @@ function Contact() {
           {/* Contact Details */}
           <div className="mb-4">
             <p className="mb-1">
-              <strong>Email:</strong> quickcartpvt123@gmail.com
+              <strong>Email:</strong> babartushar560@gmail.com
             </p>
             <p>
               <strong>Phone:</strong> +91 9529647719
