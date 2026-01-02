@@ -1,4 +1,4 @@
- function Contact() {
+function Contact() {
   return (
     <>
       {/* Contact Section */}
@@ -10,6 +10,7 @@
             Feel free to reach out 👋
           </p>
 
+          {/* Contact Form */}
           <form className="contact-form">
             <input type="text" placeholder="Your Name" required />
             <input type="email" placeholder="Your Email" required />
@@ -17,9 +18,40 @@
             <button type="submit">Send Message</button>
           </form>
 
+          {/* Contact Info */}
           <div className="contact-info">
-            <p><strong>Email:</strong> babartushar2004@gmail.com</p>
-            <p><strong>Location:</strong> Pune, India</p>
+            <p>
+              <strong>Email:</strong>{" "}
+              <a href="mailto:babartushar2004@gmail.com">
+                babartushar2004@gmail.com
+              </a>
+            </p>
+
+            <p>
+              <strong>GitHub:</strong>{" "}
+              <a
+                href="https://github.com/tusharbabar"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                github.com/tusharbabar
+              </a>
+            </p>
+
+            <p>
+              <strong>LinkedIn:</strong>{" "}
+              <a
+                href="https://linkedin.com/in/tushar-babar-69643a292"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                linkedin.com/in/tushar-babar
+              </a>
+            </p>
+
+            <p>
+              <strong>Location:</strong> Pune, India
+            </p>
           </div>
         </div>
       </section>
@@ -34,5 +66,3 @@
 }
 
 export default Contact;
-
-
