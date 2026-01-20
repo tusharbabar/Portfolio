@@ -12,7 +12,7 @@ function Hero() {
         </p>
 
         <div className="hero-buttons slide-up">
-          <a href="/Tushar-Babar.resume.pdf" className="btn primary">Download Resume</a>
+          <a href="/Tushar-b.pdf" className="btn primary">Download Resume</a>
           <a href="#projects" className="btn secondary">View Projects</a>
         </div>
 
