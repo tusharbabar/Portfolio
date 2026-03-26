@@ -11,7 +11,7 @@ function Experience() {
           
           <div className="timeline-item left fade-up delay-200">
             <div className="timeline-content card-modern">
-              <span className="timeline-date">2021 - 2024</span>
+              <span className="timeline-date">2022 - 2025</span>
               <h3 className="card-modern-title mb-2">Bachelor of Computer Science (BCS)</h3>
               <p className="card-modern-body mb-0">
                 Graduated with a strong foundation in computer science principles. Hands-on experience with Java, C++, SQL, and web technologies. Developed various academic projects focusing on database management and MVC architectures.
