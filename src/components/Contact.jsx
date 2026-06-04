@@ -1,13 +1,24 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import ContactModal from './ContactModal';
 
 function Contact() {
   const form = useRef();
   const [status, setStatus] = useState('');
+  const [senderName, setSenderName] = useState('');
+  const [senderEmail, setSenderEmail] = useState('');
+  const [showModal, setShowModal] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
     setStatus('sending');
+
+    const data = new FormData(form.current);
+    const userName = data.get('user_name') || '';
+    const userEmail = data.get('user_email') || '';
+
+    setSenderName(userName);
+    setSenderEmail(userEmail);
 
     emailjs.sendForm(
       'service_39uqbjr',
@@ -17,6 +28,7 @@ function Contact() {
     )
       .then((result) => {
         setStatus('success');
+        setShowModal(true);
         e.target.reset();
         setTimeout(() => setStatus(''), 5000);
       }, (error) => {
@@ -44,34 +56,34 @@ function Contact() {
             {/* Contact Details & Socials */}
             <div className="col-lg-4 order-2 order-lg-1 fade-up delay-100">
               <div className="card-modern p-4 p-md-5 d-flex flex-column justify-content-center h-100">
-                <h3 className="fs-4 mb-4 text-dark">Contact Information</h3>
+                <h3 className="fs-4 mb-4 text-white">Contact Information</h3>
 
                 <div className="d-flex align-items-center mb-4">
-                  <div className="bg-info bg-opacity-10 p-3 rounded-circle me-3">
+                  <div className="bg-info bg-opacity-10 p-3 rounded-circle me-3 border border-info border-opacity-10">
                     <i className="bi bi-envelope text-info fs-5"></i>
                   </div>
                   <div>
                     <h5 className="fs-6 mb-1 text-secondary">Email Me</h5>
-                    <a href="mailto:babartushar560@gmail.com" className="text-dark text-decoration-none">babartushar560@gmail.com</a>
+                    <a href="mailto:babartushar560@gmail.com" className="text-white text-decoration-none">babartushar560@gmail.com</a>
                   </div>
                 </div>
 
                 <div className="d-flex align-items-center mb-5">
-                  <div className="bg-success bg-opacity-10 p-3 rounded-circle me-3">
+                  <div className="bg-success bg-opacity-10 p-3 rounded-circle me-3 border border-success border-opacity-10">
                     <i className="bi bi-telephone text-success fs-5"></i>
                   </div>
                   <div>
                     <h5 className="fs-6 mb-1 text-secondary">Call Me</h5>
-                    <a href="tel:+919529647719" className="text-dark text-decoration-none">+91 9529647719</a>
+                    <a href="tel:+919529647719" className="text-white text-decoration-none">+91 9529647719</a>
                   </div>
                 </div>
 
-                <h3 className="fs-5 mb-3 text-dark">Social Profiles</h3>
+                <h3 className="fs-5 mb-3 text-black">Social Profiles</h3>
                 <div className="d-flex gap-3">
                   <a href="https://github.com/tusharbabar" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light rounded-circle p-2" style={{ width: '45px', height: '45px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <i className="bi bi-github fs-5"></i>
                   </a>
-                  <a href="https://linkedin.com/in/tushar-babar-69643a292" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary rounded-circle p-2" style={{ width: '45px', height: '45px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <a href="https://linkedin.com/in/tushar-babar-69643a292" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary rounded-circle p-2 border-primary" style={{ width: '45px', height: '45px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <i className="bi bi-linkedin fs-5"></i>
                   </a>
                 </div>
@@ -81,7 +93,7 @@ function Contact() {
             {/* Contact Form */}
             <div className="col-lg-6 order-1 order-lg-2 fade-up delay-200">
               <div className="card-modern p-4 p-md-5">
-                <h3 className="fs-4 mb-4 text-dark">Send Me a Message</h3>
+                <h3 className="fs-4 mb-4 text-white">Send Me a Message</h3>
                 <form ref={form} onSubmit={sendEmail}>
                   <div className="row g-4 mb-4">
                     <div className="col-md-6">
@@ -99,8 +111,7 @@ function Contact() {
                     <textarea name="message" className="form-control form-control-custom" rows="4" placeholder="Write your project details or questions..." required></textarea>
                   </div>
 
-                  {status === 'success' && <div className="alert alert-success py-2 border-0">Message sent successfully! I'll quickly get back to you.</div>}
-                  {status === 'error' && <div className="alert alert-danger py-2 border-0">Failed to send message. Please try again later.</div>}
+                  {status === 'error' && <div className="alert alert-danger py-2 border-0 bg-danger bg-opacity-10 text-danger mb-4">Failed to send message. Please try again later.</div>}
 
                   <button type="submit" className="btn-custom btn-primary-custom w-100" disabled={status === 'sending'}>
                     {status === 'sending' ? (
@@ -117,8 +128,16 @@ function Contact() {
         </div>
       </section>
 
+      {/* Connection celebration success modal */}
+      <ContactModal
+        isOpen={showModal}
+        onClose={() => setShowModal(false)}
+        userName={senderName}
+        userEmail={senderEmail}
+      />
+
       {/* Footer */}
-      <footer className="footer border-top border-secondary border-opacity-25" style={{ background: 'var(--bg-primary)' }}>
+      <footer className="footer border-top border-secondary border-opacity-25" style={{ background: 'rgba(13, 18, 34, 0.5)' }}>
         <div className="container py-4 text-center">
           <p className="mb-1 text-primary opacity-75">
             © {new Date().getFullYear()} Tushar Babar. All Rights Reserved.
