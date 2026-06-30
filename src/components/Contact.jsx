@@ -137,12 +137,12 @@ function Contact() {
       />
 
       {/* Footer */}
-      <footer className="footer border-top border-secondary border-opacity-25" style={{ background: 'rgba(13, 18, 34, 0.5)' }}>
+      <footer className="footer border-top border-secondary border-opacity-25" style={{ background: 'rgba(0, 0, 0, 0.5)' }}>
         <div className="container py-4 text-center">
-          <p className="mb-1 text-primary opacity-75">
+          <p className="mb-1 text-white opacity-75 ">
             © {new Date().getFullYear()} Tushar Babar. All Rights Reserved.
           </p>
-          <small className="text-secondary">
+          <small className="text-white">
             Built with React & Vanilla CSS Masterpieces
           </small>
         </div>
