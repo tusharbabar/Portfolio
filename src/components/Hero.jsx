@@ -36,7 +36,7 @@ function Hero() {
               <a href="#contact" className="btn-custom btn-primary-custom py-3 px-4">
                 {"Connect Now"}
               </a>
-              <a href="/Tushar_Babar.pdf" className="btn-play-custom" target="_blank" rel="noopener noreferrer">
+              <a href="/Tushar Babar Resume.pdf" className="btn-play-custom" target="_blank" rel="noopener noreferrer">
                 <div className="play-icon-circle">
                   <i className="bi bi-file-earmark-arrow-down"></i>
                 </div>
