@@ -55,8 +55,8 @@ function Contact() {
 
             {/* Contact Details & Socials */}
             <div className="col-lg-4 order-2 order-lg-1 fade-up delay-100">
-              <div className="card-modern p-4 p-md-5 d-flex flex-column justify-content-center h-100">
-                <h3 className="fs-4 mb-4 text-white">Contact Information</h3>
+              <div className="card-modern contact-card p-4 p-md-5 d-flex flex-column justify-content-center h-100">
+                <h3 className="fs-4 mb-4 card-modern-title">Contact Information</h3>
 
                 <div className="d-flex align-items-center mb-4">
                   <div className="bg-info bg-opacity-10 p-3 rounded-circle me-3 border border-info border-opacity-10">
@@ -64,7 +64,7 @@ function Contact() {
                   </div>
                   <div>
                     <h5 className="fs-6 mb-1 text-secondary">Email Me</h5>
-                    <a href="mailto:babartushar560@gmail.com" className="text-white text-decoration-none">babartushar560@gmail.com</a>
+                    <a href="mailto:babartushar560@gmail.com" className="contact-link text-break">babartushar560@gmail.com</a>
                   </div>
                 </div>
 
@@ -74,16 +74,16 @@ function Contact() {
                   </div>
                   <div>
                     <h5 className="fs-6 mb-1 text-secondary">Call Me</h5>
-                    <a href="tel:+919529647719" className="text-white text-decoration-none">+91 9529647719</a>
+                    <a href="tel:+919529647719" className="contact-link">+91 9529647719</a>
                   </div>
                 </div>
 
-                <h3 className="fs-5 mb-3 text-black">Social Profiles</h3>
+                <h3 className="fs-5 mb-3 card-modern-title">Social Profiles</h3>
                 <div className="d-flex gap-3">
-                  <a href="https://github.com/tusharbabar" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light rounded-circle p-2" style={{ width: '45px', height: '45px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <a href="https://github.com/tusharbabar" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className="btn social-link social-link-github rounded-circle p-2">
                     <i className="bi bi-github fs-5"></i>
                   </a>
-                  <a href="https://linkedin.com/in/tushar-babar-69643a292" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary rounded-circle p-2 border-primary" style={{ width: '45px', height: '45px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <a href="https://linkedin.com/in/tushar-babar-69643a292" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" className="btn social-link social-link-linkedin rounded-circle p-2">
                     <i className="bi bi-linkedin fs-5"></i>
                   </a>
                 </div>
@@ -92,8 +92,8 @@ function Contact() {
 
             {/* Contact Form */}
             <div className="col-lg-6 order-1 order-lg-2 fade-up delay-200">
-              <div className="card-modern p-4 p-md-5">
-                <h3 className="fs-4 mb-4 text-white">Send Me a Message</h3>
+              <div className="card-modern contact-card p-4 p-md-5">
+                <h3 className="fs-4 mb-4 card-modern-title">Send Me a Message</h3>
                 <form ref={form} onSubmit={sendEmail}>
                   <div className="row g-4 mb-4">
                     <div className="col-md-6">
@@ -137,12 +137,12 @@ function Contact() {
       />
 
       {/* Footer */}
-      <footer className="footer border-top border-secondary border-opacity-25" style={{ background: 'rgba(0, 0, 0, 0.5)' }}>
+      <footer className="footer footer-modern border-top">
         <div className="container py-4 text-center">
-          <p className="mb-1 text-white opacity-75 ">
+          <p className="mb-1 footer-copy">
             © {new Date().getFullYear()} Tushar Babar. All Rights Reserved.
           </p>
-          <small className="text-white">
+          <small className="footer-note">
             Built with React & Vanilla CSS Masterpieces
           </small>
         </div>

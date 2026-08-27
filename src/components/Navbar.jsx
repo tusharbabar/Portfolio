@@ -54,6 +54,9 @@ function Navbar() {
             <li className="nav-item">
               <a className="nav-link" href="#projects">Projects</a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#certificates">Certificates</a>
+            </li>
             <li className="nav-item ms-lg-3">
               <a className="btn-custom btn-primary-custom py-2 px-4 shadow-none text-white" href="#contact">Contact</a>
             </li>

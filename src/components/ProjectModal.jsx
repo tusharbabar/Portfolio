@@ -121,10 +121,18 @@ function ProjectModal({ project, onClose }) {
 
             {/* Direct Action Links */}
             <div className="d-flex flex-wrap gap-3 mt-4 pt-3 border-top border-secondary border-opacity-25">
-              <a href="https://github.com/tusharbabar" target="_blank" rel="noopener noreferrer" className="btn-custom btn-primary-custom flex-grow-1 flex-md-grow-0 py-2.5">
-                <i className="bi bi-github"></i> Source Code
+              <a 
+                href={project.githubUrl || "https://github.com/tusharbabar"} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn-custom btn-primary-custom flex-grow-1 flex-md-grow-0 py-2.5 text-white"
+              >
+                <i className="bi bi-github"></i> View GitHub Repository
               </a>
-              <button onClick={() => alert("Holographic demo is live! In production, this opens the project deployment link.")} className="btn-custom btn-outline-custom flex-grow-1 flex-md-grow-0 py-2.5">
+              <button 
+                onClick={() => alert("Live project demo is deployed & accessible via GitHub repositories.")} 
+                className="btn-custom btn-outline-custom flex-grow-1 flex-md-grow-0 py-2.5"
+              >
                 <i className="bi bi-box-arrow-up-right"></i> Live Preview
               </button>
             </div>

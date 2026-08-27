@@ -36,8 +36,28 @@ function Experience() {
             </TiltCard>
           </div>
 
-          {/* Java Full Stack Course */}
+          {/* Software Developer Internship */}
           <div className="timeline-item right fade-up delay-300">
+            <TiltCard className="border-0 bg-transparent p-0 shadow-none">
+              <div className="timeline-content">
+                <h3 className="card-modern-title mb-1 text-white">
+                  Software Developer Intern
+                </h3>
+                <p className="mb-3 text-info fw-semibold">Gsoft Solutions Pvt Ltd, Pune</p>
+
+                <ul className="card-modern-body mb-0 text-slate-300 ps-3">
+                  <li>Developed and maintained web applications using React, Node.js, HTML, CSS, and JavaScript.</li>
+                  <li>Implemented CRUD operations with Core Java and Node.js, optimized database queries, and tested APIs with Postman.</li>
+                  <li>Improved UI responsiveness and overall application performance.</li>
+                  <li>Used Git and GitHub for version control, branch management, and collaborative development.</li>
+                  <li>Developed Node.js and Express.js backend modules, designed REST APIs, integrated MySQL databases, and optimized SQL queries.</li>
+                </ul>
+              </div>
+            </TiltCard>
+          </div>
+
+          {/* Java Full Stack Course */}
+          <div className="timeline-item left fade-up delay-400">
             <TiltCard className="border-0 bg-transparent p-0 shadow-none">
               <div className="timeline-content">
                 <h3 className="card-modern-title mb-2 text-white">
